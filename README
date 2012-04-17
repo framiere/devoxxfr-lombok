@@ -1,4 +1,5 @@
-h1. Lombok
+Lombok
+------
 
 Lombok
 http://projectlombok.org/
@@ -7,7 +8,8 @@ Lombok-pg
 http://peichhorn.github.com/lombok-pg/
 
 
-h1. Eclipse
+Eclipse
+-------
 
 Plugin Eclipse More-Unit
 http://moreunit.sourceforge.net/
@@ -16,7 +18,8 @@ Pluging Eclipse builder generator
 http://code.google.com/p/bpep/
 
 
-h1. Tests
+Tests
+-----
 
 Assertions fluent
 http://code.google.com/p/fest/ 
