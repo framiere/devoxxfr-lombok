@@ -22,7 +22,7 @@ public class SynchronizedChuck implements Chuck {
         try {
             MILLISECONDS.sleep(SLEEP_IN_MS);
         } catch (InterruptedException ignore) {
-            //
+            currentThread().interrupt();
         }
     }
 }
