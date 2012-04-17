@@ -1,5 +1,6 @@
 package fr.devoxx.advanced.lazygetter;
 
+import static java.lang.Thread.currentThread;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.util.Date;
@@ -25,6 +26,7 @@ public class Pricer {
         try {
             SECONDS.sleep(PRICER_WAIT_IN_SECONDS);
         } catch (InterruptedException ignore) {
+            currentThread().interrupt();
         }
         System.out.println("Computation is done");
         return instrument.length() + dateTo.getTime() - dateFrom.getTime();
