@@ -1,24 +1,28 @@
+h1. Lombok
+
 Lombok
 http://projectlombok.org/
 
 Lombok-pg
 http://peichhorn.github.com/lombok-pg/
 
-Code de ce soir
-https://github.com/framiere/devoxxfr-lombok
 
-Assertions fluent
-http://code.google.com/p/fest/ 
-
+h1. Eclipse
 
 Plugin Eclipse More-Unit
 http://moreunit.sourceforge.net/
 
+Pluging Eclipse builder generator
+http://code.google.com/p/bpep/
 
-Eclipse builder pattern
+
+h1. Tests
+
+Assertions fluent
+http://code.google.com/p/fest/ 
+
+Test for time
 http://code.google.com/p/awaitility/
 
 
-Eclipse builder pattern
-http://code.google.com/p/bpep/
 
