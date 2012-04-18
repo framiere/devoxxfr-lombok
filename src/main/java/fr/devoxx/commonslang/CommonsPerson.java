@@ -4,16 +4,16 @@ import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-public class Person {
+public class CommonsPerson {
     private String name;
     private String firstname;
     private int age;
 
-    public Person() {
+    public CommonsPerson() {
 
     }
 
-    public Person(String name, String firstname, int age) {
+    public CommonsPerson(String name, String firstname, int age) {
         this.name = name;
         this.firstname = firstname;
         this.age = age;

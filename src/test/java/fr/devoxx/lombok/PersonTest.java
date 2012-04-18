@@ -1,10 +1,9 @@
 package fr.devoxx.lombok;
 
+import static fr.devoxx.lombok.Person.person;
 import static org.fest.assertions.Assertions.assertThat;
 
 import org.junit.Test;
-
-import fr.devoxx.lombok.Person;
 
 public class PersonTest {
     @Test
@@ -15,16 +14,11 @@ public class PersonTest {
         assertThat(chuck).isEqualTo(chucky);
         assertThat(chuck.hashCode()).isEqualTo(chucky.hashCode());
         assertThat(chuck.toString()) //
-                .startsWith(Person.class.getSimpleName()) //
-                .endsWith("(name=Norris, firstname=Chuck, age=71)");
-        System.out.println(chuck);
+                .contains(Person.class.getSimpleName()) //
+                .endsWith("(name=Norris, firstname=Chuck, age=72)");
     }
 
     private Person newGod() {
-        Person person = new Person();
-        person.setName("Norris");
-        person.setFirstname("Chuck");
-        person.setAge(71);
-        return person;
+        return person().firstname("Chuck").name("Norris").age(72).build();
     }
 }

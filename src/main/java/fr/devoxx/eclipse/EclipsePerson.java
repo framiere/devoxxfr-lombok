@@ -1,15 +1,14 @@
 package fr.devoxx.eclipse;
 
-
-public class Person {
+public class EclipsePerson {
     private String name;
     private String firstname;
     private int age;
 
-    public Person() {
+    public EclipsePerson() {
     }
 
-    public Person(String name, String firstname, int age) {
+    public EclipsePerson(String name, String firstname, int age) {
         this.name = name;
         this.firstname = firstname;
         this.age = age;
@@ -50,6 +49,11 @@ public class Person {
     }
 
     @Override
+    public String toString() {
+        return "EclipsePerson [name=" + name + ", firstname=" + firstname + ", age=" + age + "]";
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -57,7 +61,7 @@ public class Person {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Person other = (Person) obj;
+        EclipsePerson other = (EclipsePerson) obj;
         if (age != other.age)
             return false;
         if (firstname == null) {
@@ -93,12 +97,12 @@ public class Person {
             return this;
         }
 
-        public Person build() {
-            return new Person(this);
+        public EclipsePerson build() {
+            return new EclipsePerson(this);
         }
     }
 
-    private Person(Builder builder) {
+    private EclipsePerson(Builder builder) {
         this.name = builder.name;
         this.firstname = builder.firstname;
         this.age = builder.age;
