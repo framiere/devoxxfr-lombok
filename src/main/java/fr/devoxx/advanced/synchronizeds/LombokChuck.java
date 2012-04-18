@@ -24,7 +24,7 @@ public class LombokChuck implements Chuck {
         try {
             MILLISECONDS.sleep(SLEEP_IN_MS);
         } catch (InterruptedException ignore) {
-            //
+            currentThread().interrupt();
         }
     }
 }

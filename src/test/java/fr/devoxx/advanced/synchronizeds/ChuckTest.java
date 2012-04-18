@@ -2,6 +2,7 @@ package fr.devoxx.advanced.synchronizeds;
 
 import static com.jayway.awaitility.Awaitility.await;
 import static fr.devoxx.advanced.synchronizeds.Chuck.SLEEP_IN_MS;
+import static java.lang.Thread.currentThread;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
@@ -38,7 +39,7 @@ public class ChuckTest {
                         System.out.println("I am locking " + chuck.getClass().getSimpleName() + " instance for 5s");
                         SECONDS.sleep(5);
                     } catch (InterruptedException ignore) {
-                        //
+                        currentThread().interrupt();
                     }
                 }
             }
