@@ -1,20 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.devoxx</groupId>
-	<artifactId>projectlombok</artifactId>
+	<artifactId>quickie-lombok</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>projectlombok</name>
+	<name>quickie-lombok</name>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name>devoxxfr</name>
 		<url>http://www.devoxx.fr</url>
 	</organization>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<lombok-pg.version>0.11.0</lombok-pg.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.peichhorn</groupId>
 			<artifactId>lombok-pg</artifactId>
-			<version>0.10.4</version>
+			<version>${lombok-pg.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -77,9 +81,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 	<build>
 		<defaultGoal>test</defaultGoal>
 		<plugins>
@@ -112,7 +113,7 @@
 									<target>
 										<exec executable="java">
 											<arg value="-jar" />
-											<arg value="${settings.localRepository}/com/github/peichhorn/lombok-pg/0.10.4/lombok-pg-0.10.4.jar" />
+											<arg value="${settings.localRepository}/com/github/peichhorn/lombok-pg/${lombok-pg.version}/lombok-pg-${lombok-pg.version}.jar" />
 										</exec>
 									</target>
 								</configuration>
@@ -133,12 +134,12 @@
 					<plugin>
 						<groupId>org.projectlombok</groupId>
 						<artifactId>lombok-maven-plugin</artifactId>
-						<version>0.10.8.0</version>
+						<version>0.11.2.0</version>
 						<dependencies>
 							<dependency>
 								<groupId>com.github.peichhorn</groupId>
 								<artifactId>lombok-pg</artifactId>
-								<version>0.10.4</version>
+								<version>${lombok-pg.version}</version>
 								<scope>compile</scope>
 							</dependency>
 						</dependencies>

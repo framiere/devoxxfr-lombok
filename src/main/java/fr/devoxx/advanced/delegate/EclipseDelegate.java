@@ -9,7 +9,7 @@ import java.util.ListIterator;
 /**
  * Built using <code>Sources/Generate Delegate Methods</code>
  */
-public class EclipseDelegate {
+public class EclipseDelegate implements List<String> {
     private List<String> myList = new ArrayList<String>();
 
     public int size() {
@@ -111,5 +111,4 @@ public class EclipseDelegate {
     public List<String> subList(int fromIndex, int toIndex) {
         return myList.subList(fromIndex, toIndex);
     }
-
 }

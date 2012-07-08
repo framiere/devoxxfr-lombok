@@ -4,40 +4,24 @@ public class EclipsePerson {
     private String name;
     private String firstname;
     private int age;
-
-    public EclipsePerson() {
-    }
-
-    public EclipsePerson(String name, String firstname, int age) {
-        this.name = name;
-        this.firstname = firstname;
-        this.age = age;
-    }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getFirstname() {
         return firstname;
     }
-
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
-
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -47,12 +31,6 @@ public class EclipsePerson {
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         return result;
     }
-
-    @Override
-    public String toString() {
-        return "EclipsePerson [name=" + name + ", firstname=" + firstname + ", age=" + age + "]";
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -76,35 +54,23 @@ public class EclipsePerson {
             return false;
         return true;
     }
-
-    public static class Builder {
-        private String name;
-        private String firstname;
-        private int age;
-
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        public Builder firstname(String firstname) {
-            this.firstname = firstname;
-            return this;
-        }
-
-        public Builder age(int age) {
-            this.age = age;
-            return this;
-        }
-
-        public EclipsePerson build() {
-            return new EclipsePerson(this);
-        }
+    @Override
+    public String toString() {
+        return "EclipsePerson [name=" + name + ", firstname=" + firstname + ", age=" + age + "]";
+    }
+    public EclipsePerson(String name, String firstname, int age) {
+        super();
+        this.name = name;
+        this.firstname = firstname;
+        this.age = age;
+    }
+    public EclipsePerson() {
+        
     }
 
-    private EclipsePerson(Builder builder) {
-        this.name = builder.name;
-        this.firstname = builder.firstname;
-        this.age = builder.age;
-    }
+    
+    
+    
+    
+    
 }

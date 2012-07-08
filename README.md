@@ -1,3 +1,11 @@
+How to run
+----------
+
+Install lombok in your IDE `mvn -Pinstall-lombok`
+Run the tests `mvn test`
+Remove lombok `mvn -Pinstall-lombok` then go to `target/generated-sources/delombok`
+
+
 Lombok
 ------
 

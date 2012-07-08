@@ -11,6 +11,7 @@ public class CommonsPersonTest {
         assertThat(god.getFirstname()).isEqualTo("Chuck");
         assertThat(god.getName()).isEqualTo("Norris");
         assertThat(god.getAge()).isEqualTo(72);
+        System.out.println(god);
         assertThat(god.toString()) //
                 .contains(CommonsPerson.class.getSimpleName()) //
                 .endsWith("[name=Norris,firstname=Chuck,age=72]");
